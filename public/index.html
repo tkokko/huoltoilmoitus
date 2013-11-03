@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Kunnossapitoa ja korjaamista kommunikoiden</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <meta charset="utf-8">
+  
+  <!-- Geolocation -->
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+  <!-- Google maps v3 -->
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBt8e21Nm11nD-km1MWWAr2h6-eTatgAko&sensor=true"></script>
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="/js/lib/jquery.js"></script>
+
+  <!-- Crypto -->
+  <script type="text/javascript" src="http://crypto-js.googlecode.com/svn/tags/2.5.4/build/crypto/crypto-min.js"></script>
+
+  <!-- Deployd JavaScript library -->
+  <script type="text/javascript" src="/dpd.js"></script>
+
+  <!-- Application logic -->
+  <script type="text/javascript" src="/js/citymapper.js"></script>
+ 
+</head>
+
+<body>
+ <h1>Kunnossapitoa ja korjaamista kommunikoiden</h1>
+
+ <h2 id="trackingInfo" style="color: red">Salli selaimen jakaa paikkatietosi tässä palvelussa!</h2>
+
+ <div style="width: 100%; overflow: hidden;">
+  <div style="width: 70%; float: left;">
+   <div id="map-canvas"></div>
+  </div>
+  <p>
+   Kaupunkiympäristössä on jatkuvasti jotain korjattavaa. 
+   Huolellakin suunnitellut asiat eivät aina toimi niin kuin alunperin on tarkoitettu kun ympäristöolosuhteet muuttuvat. 
+   Kaupungilla liikkuvat ihmiset huomaavat monasti puutteet, viat ja toimattomuudet nopeasti, ja voisivat havainnoillaan tehostaa ylläpidosta vastuullisten organisaatioiden toimintaa. 
+   Kaupunkilaiset voivat vaivattomasti jakaa havaintonsa ja tietonsa korjattavista epäkohdista kaupungin organisaatioiden kanssa tämän kartan avulla.
+  </p>
+ </div>
+
+  <div id="form-area" style="clear: both;">
+   <p>Raahaa sininen otus siihen kohtaan karttaa, johon tekemäsi ilmoitus liittyy.<p>
+   <form class="form-inline">
+    Nimimerkki: <input type="text" id="screen-name" placeholder="Nimimerkki" required pattern=".{2,50}"/>
+    <br />
+    Ilmoitus: <textarea name="comment" id="message" placeholder="Kommentti" required pattern=".{1,1000}"></textarea>
+    <br />
+    <button id="send-btn">Lähetä</button>
+   </form>
+  </div>
+
+  <p id="done" style="display: none;">
+   Ilmoituksesi on kirjattu! Suuri kiitos avustasi.
+  </p>
+
+</body>
+
+</html>
